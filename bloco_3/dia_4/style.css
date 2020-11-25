@@ -1,0 +1,11 @@
+article {
+    display: inline-block;
+}
+
+aside {
+    float: right;
+    background-color: lightgray;
+    width: 30%;
+    text-align: center;
+    display: inline-block;
+}
