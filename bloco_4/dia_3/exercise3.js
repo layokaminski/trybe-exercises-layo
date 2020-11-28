@@ -1,7 +1,6 @@
 let n = 5
 let nDiminuindo = n;
 let line = ''
-let column = ''
 
 
 
