@@ -17,4 +17,10 @@ function changeText() {
 }
 changeText();
 
+function changeColorSquareToGreen() {
+    let square = document.getElementsByClassName('main-content')[0];
+    square.style.backgroundColor = 'rgb(76,164,109)';
+}
+changeColorSquareToGreen();
+
         
