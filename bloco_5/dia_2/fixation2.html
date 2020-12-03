@@ -37,6 +37,14 @@
       };
       createChildElementYouHere();
 
+      function createChild () {
+        let createChild = document.querySelector('#primeiroFilhoDoFilho');
+        let childElement = document.createElement('div');
+        childElement.id = 'filhoDoPrimeiroFilhoDoFilho'
+        createChild.appendChild(childElement);
+      };
+      createChild();
+
 
         /*
         1 - Crie um irmão para elementoOndeVoceEsta .
