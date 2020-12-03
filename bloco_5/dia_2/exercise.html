@@ -58,22 +58,23 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
-        function addText () {
+
             let title = document.createElement('h1')
             document.body.append(title)
             title.innerText = 'Exercício 5.2 - JavaScript DOM'
-        }
-        addText();
-
-        function addContent () {
+    
             let content = document.createElement('div')
             document.body.append(content)
             content.className = 'main-content'
+            
             let contentChild = document.createElement('div')
             content.append(contentChild)
             contentChild.className = 'center-content'
-        }
-        addContent();
+            
+            let paragraphContentChild = document.createElement('p')
+            contentChild.append(paragraphContentChild)
+            paragraphContentChild.innerText = 'Como diz o mestre Oliva, a Turma 09 é sensacional'
+            
     </script>
   </body>
 </html>
