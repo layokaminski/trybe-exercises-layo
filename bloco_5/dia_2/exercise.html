@@ -65,7 +65,15 @@
         }
         addText();
 
-
+        function addContent () {
+            let content = document.createElement('div')
+            document.body.append(content)
+            content.className = 'main-content'
+            let contentChild = document.createElement('div')
+            content.append(contentChild)
+            contentChild.className = 'center-content'
+        }
+        addContent();
     </script>
   </body>
 </html>
