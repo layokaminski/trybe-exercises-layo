@@ -22,10 +22,20 @@
       document.querySelector('#elementoOndeVoceEsta');
       
       function changeColorFather() {
-      let fatherAcess = documet.querySelector('#elementoOndeVoceEsta').parentNode.parentNode;
-            fatherAcess.style.backgroundColor = 'red';
+      let fatherAcess = document.querySelector('#elementoOndeVoceEsta').parentNode;
+            fatherAcess.style.backgroundColor = 'steelblue';
       };
       changeColorFather();
+
+      function changeText() {
+          document.getElementById('primeiroFilhoDoFilho').innerText = 'Olá Layo';
+      };
+      changeText();
+
+      function acessFirstChild() {
+          document.querySelector('#pai').firstChild;
+      };
+      acessFirstChild();
 
 
 
