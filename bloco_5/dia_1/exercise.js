@@ -12,28 +12,40 @@
 */
 
 function changeText() {
-    let paragraph = document.getElementsByTagName('p')[1];
+    let paragraph = document.getElementsByTagName('p')[1]
     paragraph.innerText = 'Daqui dois anos, me vejo trabalhando com programação dentro de um otima empresa!';
 }
 changeText();
 
 function changeColorSquareToGreen() {
-    let square = document.getElementsByClassName('main-content')[0];
+    let square = document.getElementsByClassName('main-content')[0]
     square.style.backgroundColor = 'rgb(76,164,109)';
 }
 changeColorSquareToGreen();
 
 function changeColorSquareToWhite() {
-    let square = document.getElementsByClassName('center-content')[0];
+    let square = document.getElementsByClassName('center-content')[0]
     square.style.backgroundColor = 'rgb(255,255,255)';
 }
 changeColorSquareToWhite();
 
 function changeTextTitle() {
-    let text = document.getElementsByClassName('title')[0];
+    let text = document.getElementsByClassName('title')[0]
     text.innerText = 'Exercício 5.1 - JavaScript'
     
 }
 changeTextTitle();
+
+function changeCase() {
+    let upCase = document.getElementsByTagName('p')
+    for (index = 0; index < upCase.length; index += 1) {
+        upCase[index].style.textTransform = 'uppercase';
+        console.log(upCase[index]);
+    }
+};
+changeCase();
+
+
+
 
         
