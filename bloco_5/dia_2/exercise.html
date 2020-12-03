@@ -59,22 +59,48 @@
     <script>
       // COLOQUE SEU CÓDIGO AQUI
 
-            let title = document.createElement('h1')
-            document.body.append(title)
-            title.innerText = 'Exercício 5.2 - JavaScript DOM'
+            let title = document.createElement('h1');
+            document.body.appendChild(title);
+            title.innerText = 'Exercício 5.2 - JavaScript DOM';
     
-            let content = document.createElement('div')
-            document.body.append(content)
-            content.className = 'main-content'
+            let content = document.createElement('div');
+            document.body.appendChild(content);
+            content.className = 'main-content';
             
-            let contentChild = document.createElement('div')
-            content.append(contentChild)
-            contentChild.className = 'center-content'
+            let contentChild = document.createElement('div');
+            content.appendChild(contentChild);
+            contentChild.className = 'center-content';
             
-            let paragraphContentChild = document.createElement('p')
-            contentChild.append(paragraphContentChild)
-            paragraphContentChild.innerText = 'Como diz o mestre Oliva, a Turma 09 é sensacional'
-            
+            let paragraphContentChild = document.createElement('p');
+            contentChild.appendChild(paragraphContentChild);
+            paragraphContentChild.innerText = 'Como diz o mestre Oliva, a Turma 09 é sensacional';
+
+            let contentChildLeft = document.createElement('div');
+            content.appendChild(contentChildLeft);
+            contentChildLeft.className = 'left-content';
+
+            let contentChildRight = document.createElement('div');
+            content.appendChild(contentChildRight);
+            contentChildRight.className = 'right-content';
+
+            let imgCreate = document.createElement('img');
+            contentChildLeft.appendChild(imgCreate);
+            imgCreate.setAttribute('src','https://picsum.photos/200');
+            imgCreate.className = 'small-image';
+
+            let listNumber = ['UM', 'DOIS', 'TRÊS', 'QUARTO', 'CINCO', 'SEIS', 'SETE', 'OITO', 'NOVE', 'DEZ'];
+            let listContent = document.createElement('ul');
+            contentChildRight.appendChild(listContent);
+            for (let index = 0; index < listNumber.length; index += 1) {
+                let list = listNumber[index];
+
+                let listItem = document.createElement('li');
+                listItem.innerText = list;
+
+                listContent.appendChild(listItem);
+            };
+
+
     </script>
   </body>
 </html>
