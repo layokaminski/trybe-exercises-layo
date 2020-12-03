@@ -24,10 +24,18 @@
       function createSublingElementYouHere () {
         let createSubling = document.querySelector('#pai');
         let sublingElement = document.createElement('div');
-        sublingElement.id = 'IrmãoDoElementoOndeVoceEsta'
+        sublingElement.id = 'irmãoDoElementoOndeVoceEsta'
         createSubling.appendChild(sublingElement);
       };
       createSublingElementYouHere();
+
+      function createChildElementYouHere () {
+        let createChild = document.querySelector('#elementoOndeVoceEsta');
+        let childElement = document.createElement('div');
+        childElement.id = 'filhoDoElementoOndeVoceEsta'
+        createChild.appendChild(childElement);
+      };
+      createChildElementYouHere();
 
 
         /*
