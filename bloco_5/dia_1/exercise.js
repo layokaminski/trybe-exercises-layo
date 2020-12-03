@@ -23,4 +23,17 @@ function changeColorSquareToGreen() {
 }
 changeColorSquareToGreen();
 
+function changeColorSquareToWhite() {
+    let square = document.getElementsByClassName('center-content')[0];
+    square.style.backgroundColor = 'rgb(255,255,255)';
+}
+changeColorSquareToWhite();
+
+function changeTextTitle() {
+    let text = document.getElementsByClassName('title')[0];
+    text.innerText = 'Exercício 5.1 - JavaScript'
+    
+}
+changeTextTitle();
+
         
