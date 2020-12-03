@@ -25,17 +25,22 @@
       let fatherAcess = document.querySelector('#elementoOndeVoceEsta').parentNode;
             fatherAcess.style.backgroundColor = 'steelblue';
       };
-      changeColorFather();
+      
 
       function changeText() {
           document.getElementById('primeiroFilhoDoFilho').innerText = 'Olá Layo';
       };
-      changeText();
+      
 
-      function acessFirstChild() {
+      function acessFirstChild () {
           document.querySelector('#pai').firstChild;
       };
-      acessFirstChild();
+      
+
+      function acessFirstChildToElementYouHere () {
+        document.querySelector('#elementoOndeVoceEsta').previousElementSibling;
+      }
+
 
 
 
