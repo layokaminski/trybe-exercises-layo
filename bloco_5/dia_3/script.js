@@ -51,9 +51,33 @@ daysMonth();
 function buttonsHoliday (string) {
     let feriados = document.createElement('button');
     feriados.id = 'btn-holiday';
+    feriados.innerHTML = string
     let divButton = document.querySelector('.buttons-container');
     divButton.appendChild(feriados)
 }
-buttonsHoliday();
+buttonsHoliday('FERIADOS');
+
+function clickButtonHoliday () {
+    let clickButton = document.querySelector('#btn-holiday')
+    let holiday = document.querySelectorAll('.holiday')
+    let changeColor = 'rgb(238,238,238)'
+    let returnColor = 'green'
+
+clickButton.addEventListener('click', function() {
+    for(let index = 0; index < holiday.length; index += 1) {
+        if (holiday[index].style.backgroundColor === returnColor) {
+            holiday[index].style.backgroundColor = changeColor;
+        } else {
+            holiday[index].style.backgroundColor = returnColor;
+        }
+    }
+
+})
+};
+clickButtonHoliday();
+
+
+
+
 
         
