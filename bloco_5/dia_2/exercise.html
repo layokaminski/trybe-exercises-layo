@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+
+            let title = document.createElement('h1');
+            document.body.appendChild(title);
+            title.innerText = 'Exercício 5.2 - JavaScript DOM';
+            title.className = 'title';
+    
+            let content = document.createElement('div');
+            document.body.appendChild(content);
+            content.className = 'main-content';
+            content.style.backgroundColor = 'green'
+            
+            
+            let contentChild = document.createElement('div');
+            content.appendChild(contentChild);
+            contentChild.className = 'center-content';
+            
+            let paragraphContentChild = document.createElement('p');
+            contentChild.appendChild(paragraphContentChild);
+            paragraphContentChild.innerText = 'Como diz o mestre Oliva, a Turma 09 é sensacional';
+
+            let contentChildLeft = document.createElement('div');
+            content.appendChild(contentChildLeft);
+            contentChildLeft.className = 'left-content';
+
+            let contentChildRight = document.createElement('div');
+            content.appendChild(contentChildRight);
+            contentChildRight.className = 'right-content';
+            contentChildRight.style.marginRight = 'auto'
+
+            let imgCreate = document.createElement('img');
+            contentChildLeft.appendChild(imgCreate);
+            imgCreate.setAttribute('src','https://picsum.photos/200');
+            imgCreate.className = 'small-image';
+
+            let listNumber = ['UM', 'DOIS', 'TRÊS', 'QUARTO', 'CINCO', 'SEIS', 'SETE', 'OITO', 'NOVE', 'DEZ'];
+            let listContent = document.createElement('ul');
+            contentChildRight.appendChild(listContent);
+            for (let index = 0; index < listNumber.length; index += 1) {
+                let list = listNumber[index];
+
+                let listItem = document.createElement('li');
+                listItem.innerText = list;
+
+                listContent.appendChild(listItem);
+            };
+
+                let titleContentMain = document.createElement('h3');
+                let titleContentMainTwo = document.createElement('h3');
+                let titleContentMainThree = document.createElement('h3');
+                content.appendChild(titleContentMain);
+                content.appendChild(titleContentMainTwo);
+                content.appendChild(titleContentMainThree);
+                titleContentMain.className = 'description'
+                titleContentMainTwo.className = 'description'
+                titleContentMainThree.className = 'description'
+
+                content.removeChild(contentChildLeft);
+
+                let childsListContent = listContent.childNodes;
+                listContent.removeChild(childsListContent[childsListContent.length -1])
+                listContent.removeChild(childsListContent[childsListContent.length -1])
+
+                
+
+                
+
+
+    </script>
+  </body>
+</html>
