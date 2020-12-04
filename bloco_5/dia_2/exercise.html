@@ -83,6 +83,7 @@
             let contentChildRight = document.createElement('div');
             content.appendChild(contentChildRight);
             contentChildRight.className = 'right-content';
+            contentChildRight.style.marginRight = 'auto'
 
             let imgCreate = document.createElement('img');
             contentChildLeft.appendChild(imgCreate);
@@ -107,6 +108,11 @@
                 content.appendChild(titleContentMain);
                 content.appendChild(titleContentMainTwo);
                 content.appendChild(titleContentMainThree);
+                titleContentMain.className = 'description'
+                titleContentMainTwo.className = 'description'
+                titleContentMainThree.className = 'description'
+
+                content.removeChild(contentChildLeft);
 
 
     </script>
