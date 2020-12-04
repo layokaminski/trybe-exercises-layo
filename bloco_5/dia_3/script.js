@@ -76,6 +76,15 @@ clickButton.addEventListener('click', function() {
 };
 clickButtonHoliday();
 
+function buttonsFriday (string) {
+    let friday = document.createElement('button');
+    friday.id = 'btn-friday';
+    friday.innerHTML = string
+    let divButton = document.querySelector('.buttons-container');
+    divButton.appendChild(friday)
+}
+buttonsFriday('SEXTOU!');
+
 
 
 
