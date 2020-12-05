@@ -125,7 +125,18 @@ function tasks (string) {
     myTasks.appendChild(task)
     task.innerText = string
 }
-tasks('Estudar')
+tasks('Estudar');
+
+function colorTask (string) {
+    let tasksMy = document.querySelector('.my-tasks');
+    let taskColor = document.createElement('div');
+    taskColor.className = 'task'
+    taskColor.style.backgroundColor = string
+    tasksMy.appendChild(taskColor)
+    
+};
+colorTask('cor');
+
 
 
 
