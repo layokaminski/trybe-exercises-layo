@@ -119,6 +119,13 @@ function mouseOutDay () {
 }
 mouseOutDay();
 
+function tasks (string) {
+    let myTasks = document.querySelector('.my-tasks');
+    let task = document.createElement('span');
+    myTasks.appendChild(task)
+    task.innerText = string
+}
+tasks('Estudar')
 
 
 
