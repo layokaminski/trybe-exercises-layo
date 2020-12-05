@@ -101,6 +101,23 @@ function clickButtonFriday (fridayDays) {
 };
 clickButtonFriday([4, 11, 18, 25]);
 
+function mouseOverDay () {
+    let list = document.getElementById('days')
+
+    list.addEventListener('mouseover', function(event) {
+        event.target.style.fontSize = '27px'
+    })
+};
+mouseOverDay();
+
+function mouseOutDay () {
+    let list = document.getElementById('days')
+
+    list.addEventListener('mouseout', function(event) {
+        event.target.style.fontSize = '20px'
+    })
+}
+mouseOutDay();
 
 
 
