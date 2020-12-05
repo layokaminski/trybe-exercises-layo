@@ -136,8 +136,3 @@ function colorTask (string) {
     
 };
 colorTask('cor');
-
-
-
-
-        
