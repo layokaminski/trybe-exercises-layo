@@ -85,6 +85,22 @@ function buttonsFriday (string) {
 }
 buttonsFriday('SEXTOU!');
 
+function clickButtonFriday (fridayDays) {
+    let clickButtonFriday = document.querySelector('#btn-friday');
+    let fridays = document.getElementsByClassName('friday');
+    
+    clickButtonFriday.addEventListener('click', function() {
+        for (let index = 0; index < fridays.length; index += 1) {
+            if (fridays[index].innerHTML !== 'SEXTOU') {
+                fridays[index].innerHTML = 'SEXTOU';
+            } else {
+                fridays[index].innerHTML  = fridayDays[index]
+            }
+        }
+    })
+};
+clickButtonFriday([4, 11, 18, 25]);
+
 
 
 
