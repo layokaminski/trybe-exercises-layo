@@ -136,3 +136,18 @@ function colorTask (string) {
     
 };
 colorTask('cor');
+
+function changeClassTask () {
+    let task = document.querySelector('.task');
+    let changeClass = task.className = 'task selected'
+    let returnClass = task.className = 'task'
+
+    task.addEventListener('click', function() {
+        if(task.className === returnClass) {
+            task.className = changeClass
+        } else {
+            task.className = returnClass
+        }
+    })
+}
+changeClassTask();
