@@ -139,7 +139,7 @@ colorTask('cor');
 
 function changeClassTask () {
     let task = document.querySelector('.task');
-    let changeClass = task.className = 'task selected'
+    let changeClass = task.classList = 'task selected'
     let returnClass = task.className = 'task'
 
     task.addEventListener('click', function() {
@@ -151,3 +151,20 @@ function changeClassTask () {
     })
 }
 changeClassTask();
+
+function changeColorDay() {
+    let listDay = document.getElementById('days').childNodes
+    let taskForColor = document.querySelector('.selected')
+
+
+    listDay.addEventListener('click', function() {
+        for (let index = 0; index < listDay.length; index += 1) {
+            if (taskForColor.style.backgroundColor !== listDay[index].style.backgroundColor) {
+            taskForColor.style.backgroundColor = listDay[index].style.backgroundColor
+            } else {
+            listDay[index].style.backgroundColor = 'rgb(119,119,119)'
+            }
+        }
+    })
+}
+changeColorDay();
