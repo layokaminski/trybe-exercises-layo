@@ -1,4 +1,15 @@
 window.onload = function() {
+    function inicio () {
+        let backgroundColor = localStorage.getItem("backgroundColor")
+
+        let fontColor = localStorage.getItem("fontColor")
+
+        let lineHeight = localStorage.getItem("lineHeight")
+
+        let fontFamily = localStorage.getItem("fontFamily")
+    }
+    inicio()
+    
     function changeBackgroundColor (color) {
         let content = document.getElementById('text')
         content.style.backgroundColor = color
