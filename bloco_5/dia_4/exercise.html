@@ -4,30 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript - Web Storage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section id='preferencias'>
-        <div>Change Color Background
-            <button>vermelho</button>
-            <button>azul</button>
+        <div class='options' id='background-color'>
+            <span>Change Color Background</span>   
+            <button>red</button>
+            <button>blue</button>
         </div>
-
-        <div>Change Color Text
-            <button>vermelho</button>
-            <button>azul</button>
+        <div class='options' id="font-color">
+            <span>Change Color Text</span>   
+            <button>red</button>
+            <button>blue</button>
         </div>
-        <div>Change Size Font
+        <div class='options'>
+            <span>Change Size Font</span>   
             <button>10px</button>
             <button>25px</button>
         </div>
-        <div>Espaçamento entre as linhas do texto
+        <div class='options'>
+            <span>Espaçamento entre as linhas do texto</span>   
             <button>15px</button>
             <button>30px</button>
         </div>
-        <div>Tipo da fonte (Font family)
-            <button></button>
+        <div class='options'>
+            <span>Tipo da fonte (Font family)</span>   
+            <button>Arial</button>
         </div>
     </section>
-    
+
+    <section id='text'>
+        <h2>Lorem Ipsum</h2>
+        <h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."<br>
+            "Não há quem goste de dor, que a procure e a queira ter, simplesmente porque é dor..."</h4>
+            <p class='paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci ipsum, ultrices ac sem auctor, vulputate ultrices arcu. Morbi sed lacinia purus. Vivamus consequat, enim quis sodales posuere, odio justo dictum lorem, nec fermentum augue sem at dolor. Pellentesque vitae laoreet massa. Nunc erat purus, rhoncus quis augue nec, feugiat ullamcorper est. Proin lacinia sapien non malesuada tristique. Nunc tristique eu sem at dapibus. Quisque at metus mauris. Morbi vel dictum elit, at varius nulla. Fusce enim dui, tincidunt non turpis vitae, accumsan rhoncus nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam hendrerit ipsum a mattis varius. Etiam ultricies nulla quis metus placerat consectetur eget nec tellus.</p>
+            <p class='paragraph'>Cras porta blandit arcu vel iaculis. Fusce blandit metus eget risus ultricies, ut malesuada risus eleifend. Fusce at velit non turpis sollicitudin condimentum. Donec et tempus urna. Sed semper, erat at maximus varius, felis nulla elementum eros, sed placerat sapien lacus sed nulla. In eget ornare mi. Curabitur eget tempor est. Morbi augue dolor, ullamcorper eu tellus vel, interdum semper est. Ut suscipit nisi risus, tincidunt molestie nibh rutrum id. Pellentesque congue pulvinar sodales.</p>
+            <p class='paragraph'>Aenean lacus ipsum, laoreet ut est non, vestibulum aliquam quam. Ut vel felis nunc. Aliquam ipsum lectus, eleifend vitae dui nec, mattis sagittis felis. Nullam vitae metus facilisis, luctus quam dictum, dapibus mauris. Nam malesuada tortor a rutrum feugiat. Vestibulum tempor tristique neque. Donec id venenatis augue. Pellentesque tincidunt mauris nunc, quis tincidunt libero aliquam et. Duis non magna lacus. Integer sed consequat lacus. Suspendisse id tellus a erat gravida accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sagittis dui eu porttitor elementum. In quis ipsum quam. Mauris vel ex porta, molestie libero eget, sollicitudin felis.</p>
+    </section>
+        <script src="script.js"></script>
 </body>
 </html>

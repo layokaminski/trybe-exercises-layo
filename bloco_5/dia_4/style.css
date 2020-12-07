@@ -1,0 +1,21 @@
+#preferencias {
+    display: flex;
+}
+
+.options {
+    margin: auto;
+    border: 3px solid steelblue;
+    ;
+}
+
+span, button{
+    display: block;
+}
+
+#text {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
