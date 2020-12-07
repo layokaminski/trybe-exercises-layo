@@ -1,14 +1,16 @@
 window.onload = function() {
-    function inicio () {
-        let backgroundColor = localStorage.getItem("backgroundColor")
+    function createItens () {
+        let backgroundColor = localStorage.getItem('backgroundColor')
 
-        let fontColor = localStorage.getItem("fontColor")
+        let fontColor = localStorage.getItem('fontColor')
 
-        let lineHeight = localStorage.getItem("lineHeight")
+        let fontSize = localStorage.getItem('fontSize')
 
-        let fontFamily = localStorage.getItem("fontFamily")
+        let lineHeight = localStorage.getItem('lineHeight')
+
+        let fontFamily = localStorage.getItem('fontFamily')
     }
-    inicio()
+    createItens()
     
     function changeBackgroundColor (color) {
         let content = document.getElementById('text')
@@ -34,4 +36,16 @@ window.onload = function() {
             changeTextColor(event.target.innerHTML)
         })
     }
+    function changeSizeText (size) {
+        let sizeContent = document.querySelectorAll('.paragraph')
+        for(let index = 0; index < sizeContent.length; index += 1) {
+            sizeContent[index].style.fontSize = size
+        }
+        localStorage.setItem('fontSize', size)
+    }
+    let buttonFontSize = document.querySelectorAll('#font-size > button')
+    for (let index = 0; index < buttonFontSize.length; index += 1)
+    buttonFontSize[index].addEventListener('click', function(event) {
+        changeSizeText(event.target.innerHTML)
+    })
 }
