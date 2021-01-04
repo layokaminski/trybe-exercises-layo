@@ -8,7 +8,7 @@
   </head>
   <body>
     <form action="" method="GET">
-      <fieldset>
+      <fieldset id="curriculo">
         <legend>Currículo</legend>
         <div class="line-content">
           <label for="name">Nome</label>
@@ -48,6 +48,26 @@
           <label for="residencia-2">Apartamento</label>
         </div>
       </fieldset>
+      <fieldset id="ultimo-emprego">
+        <legend>Último Emprego</legend>
+        <div class="line-content">
+          <label for="abstract">Resumo do currículo</label>
+          <textarea name="abstract" id="abstract" maxlength='1000' rows="10" class="abstract-style"></textarea>
+        </div>
+        <div class="line-content">
+          <label for="cargo">Cargo</label>
+          <input type="text" name="cargo" id="cargo" maxlength="40" required />
+        </div>
+        <div class="line-content">
+          <label for="descriçao">Descrição Cargo</label>
+          <input type="text" name="descriçao-cargo" id="descriçao" maxlength="500" required />
+        </div>
+        <div class="line-content">
+          <label for="data">Data de início</label>
+          <input type="date" name="data" id="data" required />
+        </div>
+      </fieldset>
+      <button type="submit" onclick='stopDefAction(event)'>Enviar</button>
     </form>
     <script src="script.js"></script>
   </body>
