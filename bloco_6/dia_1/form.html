@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Currículo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="" method="GET">
+      <fieldset>
+        <legend>Currículo</legend>
+        <div class="line-content">
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="name" maxlength="40" required />
+        </div>
+        <div class="line-content">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" maxlength="50" required />
+        </div>
+        <div class="line-content">
+          <label for="cpf">CPF</label>
+          <input type="text" name="cpf" id="cpf" maxlength="11" required />
+        </div>
+        <div class="line-content">
+          <label for="endereço">Endereço</label>
+          <input
+            type="text"
+            name="adress"
+            id="endereço"
+            maxlength="200"
+            required
+          />
+        </div>
+        <div class="line-content">
+          <label for="cidade">Cidade</label>
+          <input type="text" name="city" id="cidade" maxlength="28" required />
+        </div>
+        <div class="line-content">
+          <label for="estados">Estado</label>
+          <select name="state" id="estados" required></select>
+        </div>
+        <div class="line-content">
+          <span>Residencia:</span>
+          <input type="radio" name="main-residencia" id="residencia-1" />
+          <label for="residencia-1">Casa</label>
+          <input type="radio" name="main-residencia" id="residencia-2" />
+          <label for="residencia-2">Apartamento</label>
+        </div>
+      </fieldset>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
