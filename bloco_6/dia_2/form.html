@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário de Currículo</title>
     <link rel="stylesheet" href="bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
   </head>
   <body>
     <form action="" method="GET">
@@ -65,11 +66,12 @@
         </div>
         <div class="form-control">
           <label for="data">Data de início</label>
-          <input type="date" name="data" id="data" required onclick="validarData(this)" class="form-control" />
+          <input type="text" name="data" id="data" required  />
         </div>
       </fieldset>
       <button type="submit" class="btn btn-outline-primary btn-lg">Enviar</button>
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
