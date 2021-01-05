@@ -6,28 +6,30 @@
     <title>Formulário de Currículo</title>
     <link rel="stylesheet" href="bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <script src=""></script>
   </head>
   <body>
-    <form action="" method="GET">
+    <form action="" method="GET" class="js-form form">
       <fieldset id="curriculo">
         <legend>Currículo</legend>
         <div class="form-control">
           <label for="name">Nome</label>
-          <input type="text" name="name" id="name" maxlength="40" required class="form-control" />
+          <input type="text" data-validate-field="name" name="name" id="name" maxlength="40" required class="form-control" />
         </div>
         <div class="form-control">
           <label for="email">E-mail</label>
-          <input type="email" name="email" id="email" maxlength="50" required class="form-control" />
+          <input type="email" data-validate-field="email" name="email" id="email" maxlength="50" required class="form-control" />
         </div>
         <div class="form-control">
           <label for="cpf">CPF</label>
-          <input type="text" name="cpf" id="cpf" maxlength="11" required class="form-control" />
+          <input type="text" data-validate-field="cpf" name="cpf" id="cpf" maxlength="11" required class="form-control" />
         </div>
         <div class="form-control">
           <label for="endereço">Endereço</label>
           <input
             type="text"
-            name="adress"
+            data-validate-field="adress"
+            name="address"
             id="endereço"
             maxlength="200"
             required
@@ -36,17 +38,17 @@
         </div>
         <div class="form-control">
           <label for="cidade">Cidade</label>
-          <input type="text" name="city" id="cidade" maxlength="28" required class="form-control" />
+          <input type="text" data-validate-field="city" name="city" id="cidade" maxlength="28" required class="form-control" />
         </div>
         <div class="form-control">
           <label for="estados">Estado</label>
-          <select name="state" id="estados" class="form-select" required class="form-control"></select>
+          <select name="state" data-validate-field="state" id="estados" class="form-select" class="form-control" required></select>
         </div>
         <div class="form-control">
           <span>Residencia:</span>
-          <input class="form-check-input" type="radio" name="main-residencia" id="residencia-1" />
+          <input class="form-check-input" data-validate-field="radio" type="radio" name="main-residencia" id="residencia-1" />
           <label class="form-check-label" for="residencia-1">Casa</label>
-          <input class="form-check-input" type="radio" name="main-residencia" id="residencia-2" />
+          <input class="form-check-input" data-validate-field="radio" type="radio" name="main-residencia" id="residencia-2" />
           <label class="form-check-label" for="residencia-2">Apartamento</label>
         </div>
       </fieldset>
@@ -54,24 +56,26 @@
         <legend>Último Emprego</legend>
         <div class="form-group">
           <label for="abstract">Resumo do currículo</label>
-          <textarea name="abstract" id="abstract" maxlength='1000' rows="10" class="form-control"></textarea>
+          <textarea name="abstract" data-validate-field="text" id="abstract" maxlength='1000' rows="10" class="form-control" required></textarea>
         </div>
         <div class="form-control">
           <label for="cargo">Cargo</label>
-          <input type="text" name="cargo" id="cargo" maxlength="40" required class="form-control" />
+          <input type="text" data-validate-field="position" name="cargo" id="cargo" maxlength="40" required class="form-control" />
         </div>
         <div class="form-control">
           <label for="descriçao">Descrição Cargo</label>
-          <input type="text" name="descriçao-cargo" id="descriçao" maxlength="500" required class="form-control" />
+          <input type="text" data-validate-field="description" name="descriçao-cargo" id="descriçao" maxlength="500" required class="form-control" />
         </div>
         <div class="form-control">
           <label for="data">Data de início</label>
-          <input type="text" name="data" id="data" required  />
+          <input type="text" data-validate-field="date" name="data" id="data" required/>
         </div>
       </fieldset>
       <button type="submit" class="btn btn-outline-primary btn-lg">Enviar</button>
+      <button type="reset" class="btn btn-outline-primary btn-lg">Limpar</button>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="./just-validate-1.5.0/package/dist/js/just-validate.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
