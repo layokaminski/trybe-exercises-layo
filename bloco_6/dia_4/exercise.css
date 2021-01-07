@@ -38,3 +38,7 @@ body {
   list-style: none;
   margin-right: 10px;
 }
+
+.header-container > nav:nth-child(1) {
+  order: 1;
+}
