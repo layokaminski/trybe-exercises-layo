@@ -57,11 +57,9 @@ console.log(changeString('Tryber x aqui!'));
 const skills = ['HTML', 'CSS', 'ES6', 'Mobile First', 'JavaScript']
 
 const countainerSkills = (string, array) => {
-  array.sort((a, b) => a - b);
+  array.sort();
 
-return `${string} Minhas cinco principais habilidades são: 
-${array.join('\n')}
-#goTrybe`
+return `${string} Minhas cinco principais habilidades são: \n${array.join('\n')}  \n#goTrybe`
 }
 
 console.log(countainerSkills(changeString('Tryber x aqui!'), skills));
