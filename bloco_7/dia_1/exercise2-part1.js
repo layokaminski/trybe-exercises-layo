@@ -4,8 +4,8 @@ const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
 console.log(oddsAndEvens);
 
-const arrayArrumado = array => oddsAndEvens.sort((a, b) => a - b);
+const arrayOrder = array => array.sort((a, b) => a - b);
 
-arrayArrumado(oddsAndEvens)
+arrayOrder(oddsAndEvens)
 
 console.log(`Os números ${oddsAndEvens} se encontram ordenados de forma crescente!`);

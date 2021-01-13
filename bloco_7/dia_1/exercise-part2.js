@@ -13,19 +13,18 @@ console.log(factorial(7));
 
 // 2. Crie uma função que receba uma frase e retorne qual a maior palavra.
 
-const biggerLetter = frase => {
-  const arrayFrase = frase.split(' ');
-  console.log(arrayFrase)
-  let maior = arrayFrase[0];
-  for (let index = 0; index < arrayFrase.length; index += 1) {
-    if (arrayFrase[index].length > maior.length) {
-      maior = arrayFrase[index];
+const biggerWord = frase => {
+  const arrayPhrase = frase.split(' ');
+  let biggestWordPhrase = arrayPhrase[0];
+  for (let index = 0; index < arrayPhrase.length; index += 1) {
+    if (arrayPhrase[index].length > biggestWordPhrase.length) {
+      biggestWordPhrase = arrayPhrase[index];
     }
   }
-  return maior;
+  return biggestWordPhrase;
 }
 
-console.log(biggerLetter("Antônio foi no banheiro e não sabemos o que aconteceu"))
+console.log(biggerWord("Antônio foi no banheiro e não sabemos o que aconteceu"))
 
 /* 3. Crie uma página que contenha:
 
