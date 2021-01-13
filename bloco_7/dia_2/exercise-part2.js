@@ -48,24 +48,33 @@ console.log(listValues(lesson3));
 
 // 5. Crie um objeto de nome allLessons , que deve agrupar todas as aulas através do Object.assign . Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1 , lesson2 e lesson3 . Ao executar o comando console.log(allLessons) , a saída deverá ser a seguinte:
 
-const allLessons = {
+/*const allLessons = {
   lesson1: Object.assign(lesson1),
   lesson2: Object.assign(lesson2),
   lesson3: Object.assign(lesson3),
-};
+};*/
+
+const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 })
 
 console.log(allLessons);
 
 // 6. Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
 
 const sumNumberStudents = object => {
-  let arrayValues = Object.keys(object)
+  let arrayValues = Object.keys(object);
   let sum = 0;
 
-  for (index in arrayValues) {
+  for (let index = 0; index < arrayValues.length; index += 1) {
     sum += object[arrayValues[index]].numeroEstudantes
-  }
-
+  };
   return sum
-}
-console.log(sumNumberStudents(allLessons))
+};
+
+console.log(sumNumberStudents(allLessons));
+
+// 7. Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto.
+
+const getValueByNumber = (object, number) => Object.values(object)[number];
+
+console.log(getValueByNumber(lesson1, 0));
+
