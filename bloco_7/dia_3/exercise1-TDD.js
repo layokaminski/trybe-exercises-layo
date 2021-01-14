@@ -5,7 +5,7 @@ const addOne = array => {
   let newArray = [];
 
   for (let index = 0; index < array.length; index += 1) {
-    newArray.push(myArray[index] + 1);
+    newArray.push(array[index] + 1);
   };
   
   return newArray;
