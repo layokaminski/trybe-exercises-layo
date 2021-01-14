@@ -9,7 +9,7 @@ const addOne = array => {
   };
   
   return newArray;
-}
+};
 
 const myArray = [31, 57, 12, 5];
 const unchanged = [31, 57, 12, 5];
