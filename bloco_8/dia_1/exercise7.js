@@ -37,7 +37,7 @@ const books = [
     genre: 'Ficção Científica',
     author: {
       name: 'Frank Herbert',
-      birthYear: 2020,
+      birthYear: 1920,
     },
     releaseYear: 1965,
   },
