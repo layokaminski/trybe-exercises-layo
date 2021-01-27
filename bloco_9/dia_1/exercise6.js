@@ -16,7 +16,7 @@ const handleError = (errorReason) => console.log(`Error getting temperature: ${e
 // definição da função sendMarsTemperature...
 const sendMarsTemperature = (onSuccess, onFail) => {
   setTimeout(() => {
-    const didOperationSucceed = Math.random() >= 0.6;
+    const didOperationSucceed = Math.random() <= 0.6;
     if (didOperationSucceed) {
       onSuccess(getMarsTemperature())
     } else {
