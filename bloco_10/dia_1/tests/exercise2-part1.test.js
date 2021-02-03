@@ -1,4 +1,4 @@
-const myRemove = require('./exercise2-part1');
+const myRemove = require('../exercises/exercise2-part1');
 
 describe ('Requisitos - Exercício 2', () => {
   it ('Verifique se a chamada myRemove([1, 2, 3, 4], 3) retorna o array esperado', () => {

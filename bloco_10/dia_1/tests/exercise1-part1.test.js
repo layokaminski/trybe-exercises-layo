@@ -1,4 +1,4 @@
-const sum = require('./exercise1-part1');
+const sum = require('../exercises/exercise1-part1');
 
 describe ('Requisitos - Exercício 1', () => {
   it('A função sum(a, b) retorna a soma do parâmetro a com o b', () => {
