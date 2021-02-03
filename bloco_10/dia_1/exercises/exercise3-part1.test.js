@@ -1,6 +1,6 @@
 const myRemoveWithoutCopy = require('./exercise3-part1');
 
-describe('Requisitos - Exercício 3', () => {
+describe ('Requisitos - Exercício 3', () => {
   it ('Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 3) retorna o array esperado', () => {
     expect([1, 2, 4]).toEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3));
   });
