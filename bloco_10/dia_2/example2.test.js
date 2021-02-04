@@ -17,6 +17,10 @@ const findAnimalsByType = (type) => (
   })
 );
 
+const getListAnimals = (type) => (
+  findAnimalsByType(type).then(list => list)
+);
+
 test('Testando com async/await', async () => {
   const listDogs = await getListAnimals('Dog');
   expect(listDogs[0].name).toEqual('Dorminhoco');
