@@ -1,6 +1,8 @@
-const uppercase = require('./exercise1');
+const uppercase = (str, callback) => {
+  callback(str.toUpperCase());
+};
 
-test (`uppercase 'test' to equal 'TEST'`, async () => {
+test ('uppercase transformando layo em LAYO', async () => {
   await uppercase('layo', (str) => {
     expect(str).toBe('LAYO');
   });
