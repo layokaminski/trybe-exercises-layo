@@ -8,7 +8,7 @@ const getRepos = (url) => {
     });
 };
 
-test('Verifica se retorna um resolve', () => {
+test('Verifica se a getRepos retorna um resolve', () => {
   return getRepos('https://api.github.com/orgs/tryber/repos').then((data) => {
     expect(data).toContain('sd-01-week4-5-project-todo-list');
     expect(data).toContain('sd-01-week4-5-project-meme-generator');
