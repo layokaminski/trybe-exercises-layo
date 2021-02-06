@@ -1,7 +1,7 @@
 const numberAleatory = require('./exercise1')
 jest.mock('./exercise1');
 
-test('Verificar funcionalidade da numberAleatory', () => {  
+test('#Exercicio 1 - 10.3', () => {  
   numberAleatory.mockReturnValue(10);
 
   numberAleatory();
