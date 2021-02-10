@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Test from './Component';
+import Component from './Component';
 
 const techs = ['React', 'HTML', 'CSS', 'JEST', 'JavaScript', 'Linux', 'Git'];
 
@@ -13,7 +13,7 @@ const task = (value) => {
 function App() {
   return (
     <div>
-      <Test />
+      <Component />
       {techs.map(element => task(element))}
     </div>
   )

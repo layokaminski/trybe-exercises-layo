@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Test extends Component {
+class Component extends React.Component {
   render() {
     return (
       <div>
         <h1>Layo Kaminski</h1>
-        <p>Um cara que está contente com todas as coisas novas que está aprendendo diariamente</p>
+        <p>Techs aprendidas até o momento:</p>
       </div>
     )
   }
 }
 
-export default Test;
+export default Component;
