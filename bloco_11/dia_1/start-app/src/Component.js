@@ -5,7 +5,7 @@ class Test extends Component {
     return (
       <div>
         <h1>Layo Kaminski</h1>
-        <p>Um cara legal que está contente com todas as coisas novas que está aprendendo diariamente</p>
+        <p>Um cara que está contente com todas as coisas novas que está aprendendo diariamente</p>
       </div>
     )
   }
