@@ -4,6 +4,7 @@ import Form from './Form';
 import FormError from './FormError';
 import FormDataDisplay from './FormDataDisplay';
 import { connect } from 'react-redux';
+import { updateStateAction } from './actions';
 
 const INITIAL_STATE = {
   name: '',
@@ -26,7 +27,7 @@ class App extends Component {
     this.state = INITIAL_STATE;
   }
 
-  changeHandler = event => {
+  changeHandler = (event) => {
     let { name, value } = event.target;
 
     if (name === 'name') value = value.toUpperCase();
@@ -44,13 +45,15 @@ class App extends Component {
   }
 
   updateState(name, value) {
-    this.setState((state) => ({
+    const { updateStateAction } = this.props;
+/*     this.setState((state) => ({
       [name]: value,
       formError: {
         ...state.formError,
         [name]: this.validateField(name, value)
       }
-    }));
+    })); */
+    updateStateAction(name, value)
   }
 
   validateAddress = address => address.replace(/[^\w\s]/gi, '')
@@ -77,7 +80,6 @@ class App extends Component {
   render() {
     // const { submitted } = this.state;
     const { send } = this.props;
-
     return (
       <main>
         <Form
@@ -88,7 +90,7 @@ class App extends Component {
         <div className="container">
           <FormError formError={this.state.formError} />
         </div>
-        { send && <FormDataDisplay currentState={ this.state } /> }
+        { send && <FormDataDisplay /> }
       </main>
     );
   }
@@ -98,4 +100,8 @@ const mapStateToProps = (state) => ({
   send: state.registerReducer.send,
 });
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = (dispatch) => ({
+  updateStateAction: (name, value) => dispatch(updateStateAction(name, value)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
