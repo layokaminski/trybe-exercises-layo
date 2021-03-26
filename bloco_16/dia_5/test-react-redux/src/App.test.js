@@ -5,7 +5,7 @@ import renderWithRedux from './tests/renderWithRedux';
 
 describe('testing clicks', () => {
   beforeEach(cleanup);
-  test('the page should has a button and a text 0', () => {
+  it('the page should has a button and a text 0', () => {
     const { queryByText } = renderWithRedux(<App />);
     const buttonAdicionar = queryByText('Clique aqui');
 
@@ -13,7 +13,7 @@ describe('testing clicks', () => {
     expect(queryByText('0')).toBeInTheDocument();
   });
 
-  test('a click in a button should increment the value of clicks', () => {
+  it('a click in a button should increment the value of clicks', () => {
     const { queryByText } = renderWithRedux(<App />, { initialState: { clickReducer: { counter: 5 }}});
 
     expect(queryByText('5')).toBeInTheDocument();
