@@ -1,0 +1,24 @@
+
+@media screen and (min-width: 330px) and (max-width: 568px) and (orientation: landscape) {
+  .topo-site {
+    background-color: green;
+  }
+
+  .topo-site h1 {
+    color: white;
+  }
+
+  .site {
+    width: 100%;
+  }
+
+  .corpo-site {
+    background-color: white;
+    flex-direction: column;
+  }
+
+  .corpo-site h1 {
+    background-color: gray;
+    margin: 5px 0;
+  }
+}

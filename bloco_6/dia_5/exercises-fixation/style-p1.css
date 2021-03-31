@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.topo-site {
+  display: flex;
+  justify-content: center;
+}
+
+.site {
+  background-color: #333;
+}
+
+.corpo-site {
+  display: flex;
+  text-align: center;
+}
+
+@media screen and (min-width: 568px) {
+  .topo-site {
+    background-color: #f00;
+  }
+  .topo-site h1 {
+    color: #fff;
+    font-size: 2em;
+  }
+
+  .site {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .corpo-site {
+    justify-content: space-around;
+  }
+
+  .corpo-site h1 {
+    color: green
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 568px) {
+  .topo-site {
+    background-color: #ff0;
+  }
+
+  .topo-site h1 {
+    color: #f00;
+  }
+
+  .site {
+    width: 100%;
+  }
+
+  .corpo-site {
+    background-color: white;
+    flex-direction: column;
+  }
+
+  .corpo-site h1 {
+    background-color: gray;
+    margin: 5px 0;
+  }
+}
