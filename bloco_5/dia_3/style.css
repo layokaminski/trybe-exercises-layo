@@ -154,6 +154,6 @@
     padding: 10px 0;
   }
 
-  .selected {
-    background-color: red;
-  }
+.task.selected {
+  background-color: steelblue;
+}

@@ -153,18 +153,25 @@ function changeClassTask () {
 changeClassTask();
 
 function changeColorDay() {
-    let listDay = document.getElementById('days').childNodes
-    let taskForColor = document.querySelector('.selected')
+    let listDay = document.querySelectorAll('.day')
+    let inicioCor = 'rgb(119,119,119)'
+    let taskForColor = document.querySelector('.task.selected')
 
+    for (let index = 0; index < listDay.length; index += 1) {
+        listDay[index].addEventListener('click', function(event) {
 
-    listDay.addEventListener('click', function() {
-        for (let index = 0; index < listDay.length; index += 1) {
-            if (taskForColor.style.backgroundColor !== listDay[index].style.backgroundColor) {
-            taskForColor.style.backgroundColor = listDay[index].style.backgroundColor
+            if (taskForColor == null) {
+                return
+              }
+
+            let changeBackgroundColor = taskForColor.style.backgroundColor
+
+            if (event.target.style.color == inicioCor) {
+                event.target.style.color = inicioCor
             } else {
-            listDay[index].style.backgroundColor = 'rgb(119,119,119)'
+                event.target.style.backgroundColor = changeBackgroundColor
             }
-        }
-    })
+        })
+    }
 }
-changeColorDay();
+changeColorDay()
