@@ -1,1 +1,1 @@
-db.superheroes.countDocuments({'aspects.eyeColor': {$eq: 'green'}});
+db.superheroes.countDocuments({'aspects.eyeColor': {$eq: 'blue'}});
