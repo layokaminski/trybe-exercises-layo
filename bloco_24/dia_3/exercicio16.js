@@ -2,7 +2,7 @@ db.movies.updateOne(
   { title: "Godzilla" },
   {
     $set: {
-      description: "An eight-year-old troublemaker must protect his house from a pair of burglars when he is accidentally left home alone by his family during Christmas vacation."
+      description: "The world is beset by the appearance of monstrous creatures, but one of them may be the only one who can save humanity."
     }
   }
 );
