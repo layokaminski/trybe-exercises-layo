@@ -1,7 +1,7 @@
 db.clientes.aggregate([
   {
     $match: {
-      sexo: "MASCULINO",
-    },
-  },
+      sexo: "MASCULINO"
+    }
+  }
 ]);
