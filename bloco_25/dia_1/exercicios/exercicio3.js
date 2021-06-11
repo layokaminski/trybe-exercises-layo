@@ -8,4 +8,7 @@ db.clientes.aggregate([
       },
     },
   },
+  {
+    $limit: 5,
+  },
 ]);
