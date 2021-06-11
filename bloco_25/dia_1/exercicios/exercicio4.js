@@ -5,4 +5,5 @@ db.clientes.aggregate([
       total: { $sum: 1 }
     },
   },
+  { $match: { _id: "SC" } },
 ]);
