@@ -23,3 +23,22 @@ const fs = require('fs').promises;
 searchId(25)
   .then((personagem) => console.log(personagem))
   .catch(err => console.log(err.message)); */
+
+// PARTE 3
+/* async function alterFile () {
+  const simpsons = await fs.readFile('simpsons.json', 'utf8')
+  .then((response) => JSON.parse(response));
+
+  const resolve =  await simpsons
+    .find((personagem) => personagem.id !== '10' && personagem.id !== '6');
+  
+  await fs.writeFile('simpsonsDB.json', JSON.stringify(resolve))
+  .then(() => {
+    console.log('Arquivo escrito com sucesso!');
+  })
+  .catch((err) => {
+    console.error(`Erro ao escrever o arquivo: ${err.message}`);
+  });
+}
+
+alterFile(); */
