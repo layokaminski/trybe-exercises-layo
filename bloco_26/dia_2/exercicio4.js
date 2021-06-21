@@ -30,7 +30,7 @@ searchId(25)
   .then((response) => JSON.parse(response));
 
   const resolve =  await simpsons
-    .find((personagem) => personagem.id !== '10' && personagem.id !== '6');
+    .filter((personagem) => personagem.id !== '10' && personagem.id !== '6');
   
   await fs.writeFile('simpsonsDB.json', JSON.stringify(resolve))
   .then(() => {
@@ -42,3 +42,7 @@ searchId(25)
 }
 
 alterFile(); */
+
+// PARTE 4
+
+async 
