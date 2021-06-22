@@ -50,4 +50,20 @@ describe('Executa a função numberNatural', () => {
       });
     });
   });
+
+  describe('quando o parâmetro não for um número', () => {
+    describe('a resposta', () => {
+      it('é uma "string"', () => {
+        const resposta = numberNatural('test');
+
+        expect(resposta).to.be.a('string');
+      });
+
+      it('é igual a "o valor deve ser um número"', () => {
+        const resposta = numberNatural('test');
+
+        expect(resposta).to.be.equals('o valor deve ser um número');
+      });
+    });
+  });
 });
