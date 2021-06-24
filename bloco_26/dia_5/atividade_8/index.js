@@ -20,6 +20,7 @@ const users = [
 const getByUser = (req, res, next) => {
   const query = req.query.q;
   const userFilter = req.query.user;
+
   if (!query) {
     return next();
   }
