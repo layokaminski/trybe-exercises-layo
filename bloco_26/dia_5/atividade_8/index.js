@@ -25,14 +25,16 @@ const getByUser = (req, res, next) => {
   }
 
   const searchUser = users.find(({ user }) => userFilter === user).id;
-  const filteredUser = users.find(({ id }) => searchUser === id);
+  const filteredUser = users.find(({ id }) => searchUser === id).comments;
 
   return res.status(200).json(filteredUser);
 } 
 
 app.get('/comments', getByUser, (_req, res) => {
+  const allComments = users
+    .reduce((acc, { comments }) => [...acc, ...comments], []);
 
-  return res.status(200).json(users);
+  return res.status(200).json(allComments);
 });
 
 app.listen(PORT, () => {
