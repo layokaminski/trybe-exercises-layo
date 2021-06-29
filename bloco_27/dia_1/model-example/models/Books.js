@@ -24,7 +24,9 @@ const isValid = async (title, author_id) => {
 
   if (!title || title.length < 3) return false;
 
-  if (!(await Author.findById(author_id))) return false;
+  const author = await Author.findById(author_id);
+
+  if (author.length <= 0) return false;
 
   return true;
 }

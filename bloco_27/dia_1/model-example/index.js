@@ -50,7 +50,7 @@ app.get('/books/:id', async (req, res) => {
 app.post('/books', async (req, res) => {
   const { title, author_id } = req.body;
 
-  if (!Books.isValid(title, author_id)) {
+  if (!await Books.isValid(title, author_id)) {
     return res.status(400).json({ message: 'Dados inválidos' });
   }
 
