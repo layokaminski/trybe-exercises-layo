@@ -10,8 +10,11 @@ const getAll = async () => {
 
 const getByAuthorId = async (id) => {
   const [ book ] = await connection.execute(
-    `SELECT title, author_id FROM model_example.books WHERE ${id} = author_id`,
+    `SELECT title, author_id FROM model_example.books WHERE author_id = ?`,
+    [id]
   );
+
+  if (!book) return null;
 
   return book;
 }
