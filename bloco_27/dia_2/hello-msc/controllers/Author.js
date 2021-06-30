@@ -4,7 +4,7 @@ const rescue = require('express-rescue');
 const service = require('../services/Author');
 const Joi = require('joi');
 
-const getAll = rescue(async (req, res) => {
+const getAll = rescue(async (_req, res) => {
   const authors = await service.getAll();
 
   res.status(200).json(authors);

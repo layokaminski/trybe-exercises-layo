@@ -14,6 +14,7 @@ module.exports = (err, req, res, _next) => {
   // Caso não seja um erro do Joi, pode ser um erro de domínio ou um erro inesperado.
   // Construímos, então, um mapa que conecta um erro de domínio a um status HTTP.
   const statusByErrorCode = {
+    badRequest: 400, // Erros do tipo `badRequest` retornam status 400 Bad Request
     notFound: 404, // Erros do tipo `notFound` retornam status 404 Not Found
     alreadyExists: 409, // Erros do tipo `alreadyExists` retornam status 409 Conflict
     // Podemos adicionar quantos códigos novos desejarmos

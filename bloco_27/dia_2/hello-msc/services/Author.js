@@ -1,6 +1,6 @@
 const Author = require('../models/Author');
 
-const getAll = async () => Author.getAll();
+const getAll = async () => await Author.getAll();
 
 const findById = async (id) => {
   // Solicitamos que o model realize a busca no banco
