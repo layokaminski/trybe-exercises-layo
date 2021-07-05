@@ -8,12 +8,25 @@ const API_TOKEN = '2d635ea9b637ea0f27d58985cc161d64';
 
 // Criamos um novo objeto de Headers
 const headers = new fetch.Headers({
-  Authorization: API_TOKEN});
+  Authorization: API_TOKEN,
+  // Precisamos adicionar o header `Content-Type` e defini-lo como `application/json`
+  'Content-Type': 'application/json',
+});
 
-// Para aquecer, vamos começar com uma requisição do tipo `GET`
+// Depois, criamos o body
+// Utilizamos o `stringify` para que possamos enviar esse body como JSON
+const body = JSON.stringify({
+  name: 'Tryber',
+  email: 'tryber@betrybe.com',
+  password: 'Tr1b3r'
+});
+
+// Para aquecer, vamos começar com uma requisição do tipo `POST`
 fetch('https://postman-echo.com/post?param1=teste', {
   headers,
   method: 'POST',
+  // Adicionamos o body às opções da request
+  body,
 })
   .then((response) => {
     // Ao receber a resposta, verificamos se correu tudo bem
