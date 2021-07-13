@@ -15,7 +15,7 @@ const login = (req, res, _next) => {
   }
 
   const payload = {
-    user: req.body.user,
+    username: req.body.username,
     admin: false,
   };
 
