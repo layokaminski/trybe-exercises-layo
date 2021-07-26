@@ -1,5 +1,15 @@
 // ./index.js
 
+/* Apoio para a função `setApproved` */
+const SCHOOL_DATA = {
+  Standard: {
+    approvalGrade: 0.7,
+  },
+  Hogwarts: {
+    approvalGrade: 0.8,
+  },
+};
+
 /* "Converter" */
 /* Apoio para a função `getGradeLetter`, lembraremos disso mais a frente */
 const GRADE_DICT = {
@@ -30,33 +40,19 @@ const getGradeLetter = (gradeNumber) => {
 const getLetterGrades = ({ name, grade }) => ({
   name,
   grade,
-  letterGrade: getGradeLetter(grade) });
+  letterGrade: getGradeLetter(grade),
+});
 
 /* "Converter" */
 const percentageGradesIntoLetters = ({ name, disciplines, school }) => ({
   name,
   school,
-  disciplines: disciplines.map(getLetterGrades) });
-
-// const percentageGradesIntoLetters = ({ name, disciplines }) => ({
-//   name,
-//   disciplines: disciplines.map(({ name, grade }) => {
-//     let letterGrade;
-
-//     if (grade >= 0.9) letterGrade = 'A';
-//     else if (grade >= 0.8) letterGrade = 'B';
-//     else if (grade >= 0.7) letterGrade = 'C';
-//     else if (grade >= 0.6) letterGrade = 'D';
-//     else if (grade >= 0.1) letterGrade = 'E';
-//     else letterGrade = 'F';
-
-//     return { name, grade, letterGrade };
-//   }),
-// });
+  disciplines: disciplines.map(getLetterGrades),
+});
 
 /* "Determinar" */
-const approvedStudents = ({ disciplines }) =>
-  disciplines.every(({ grade }) => grade > 0.7);
+const approvedStudents = (disciplines, { approvalGrade }) =>
+  disciplines.every(({ grade }) => grade > approvalGrade);
 
 /* "Atualizar" */
 const updateApprovalData = ({ name: studentName, disciplines }) => {
@@ -69,7 +65,7 @@ const updateApprovalData = ({ name: studentName, disciplines }) => {
 function setApproved(students) {
   students
     .map(percentageGradesIntoLetters)
-    .filter(approvedStudents)
+    .filter(({ disciplines, school }) => approvedStudents(disciplines, SCHOOL_DATA[school]))
     .map(updateApprovalData);
 }
 
@@ -87,6 +83,33 @@ module.exports = {
   setApproved,
   getLetterGrades,
 };
+
+// function setApproved(students) {
+//   students
+//     .map(percentageGradesIntoLetters)
+//     .filter(approvedStudents)
+//     .map(updateApprovalData);
+// }
+
+// /* "Determinar" */
+// const approvedStudents = ({ disciplines }) =>
+//   disciplines.every(({ grade }) => grade > 0.7);
+
+// const percentageGradesIntoLetters = ({ name, disciplines }) => ({
+//   name,
+//   disciplines: disciplines.map(({ name, grade }) => {
+//     let letterGrade;
+
+//     if (grade >= 0.9) letterGrade = 'A';
+//     else if (grade >= 0.8) letterGrade = 'B';
+//     else if (grade >= 0.7) letterGrade = 'C';
+//     else if (grade >= 0.6) letterGrade = 'D';
+//     else if (grade >= 0.1) letterGrade = 'E';
+//     else letterGrade = 'F';
+
+//     return { name, grade, letterGrade };
+//   }),
+// });
 
 // function setApproved(students) {
 //   const studentsWithLetterGrade = students.map((student) => {
