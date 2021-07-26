@@ -35,8 +35,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(`${__dirname}/uploads`));
 
-app.post('/upload', upload.single('file'), (req, res) => {
-  res.status(200).json({ body: req.body, file: req.file });
+app.post('/upload', upload.single('file'), middlewares.validTypeFile, (req, res) => {
+  if (req.fileError) {
+    return res.status(403).json(req.fileError);
+  }
+  return res.status(200).json({ body: req.body, file: req.file });
 });
 
 app.get('/ping', controllers.ping);
