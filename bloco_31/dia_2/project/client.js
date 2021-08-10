@@ -7,7 +7,7 @@ const client = net.connect({ port: 8080 }, () => {
 /* Assim como no servidor, também temos eventos do lado do cliente, onde o evento 'data' é ativado quando o servidor envia uma mensagem para o cliente. */
 client.on('data', (data) => {
   console.log(data.toString());
- // client.end();
+ client.end();
 });
 
 /* Quando a conexão é interrompida/terminada, é ativado o evento 'end', onde podemos limpar alguns caches, dar uma mensagem para usuário, atualizar algum dado no banco de dados etc. */
