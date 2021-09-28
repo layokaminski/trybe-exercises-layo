@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import json
 import csv
+import gzip
 
 
 class SalesReport(ABC):
@@ -19,8 +20,18 @@ class SalesReport(ABC):
                 'Coluna 3': 'Dado C'
                 }]
 
+    def compress(self):
+        binary_content = json.dumps(self.build()).encode('utf-8')
+
+        with gzip.open(self.export_file + '.gz', 'wb') as compressed_file:
+            compressed_file.write(binary_content)
+
     @abstractmethod
     def serialize(self):
+        raise NotImplementedError
+
+    @abstractmethod
+    def get_length(self):
         raise NotImplementedError
 
 
@@ -28,6 +39,9 @@ class SalesReportJSON(SalesReport):
     def serialize(self):
         with open(self.export_file + '.json', 'w') as file:
             json.dump(self.build(), file)
+
+    def get_length(self):
+        return 4
 
 
 class SalesReportCSV(SalesReport):
@@ -43,6 +57,7 @@ class SalesReportCSV(SalesReport):
 # Para testar
 relatorio_de_vendas = SalesReportJSON('meu_relatorio')
 relatorio_de_vendas.serialize()
+relatorio_de_vendas.get_length()
 
 relatorio_de_compras = SalesReportCSV('meu_relatorio')
 relatorio_de_compras.serialize()
