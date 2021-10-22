@@ -7,3 +7,16 @@ def countdown(n):  # nome da função e parâmetro
 
 
 countdown(5)
+
+
+# Iterative
+def iterative_countdown(n):
+    while n > 0:
+        print(n)
+        n = n - 1
+    print("FIM!")
+
+    return n
+
+
+iterative_countdown(5)
