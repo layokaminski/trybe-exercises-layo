@@ -1,0 +1,1 @@
+db.class.updateOne({ title: "Batman" }, { $inc: { imdbRating: 2 } });
